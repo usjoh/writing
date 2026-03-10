@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Essays — Jeffrey M. O'Halloran</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Libre+Franklin:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:        #1a1814;
+      --ink-light:  #4a4540;
+      --ink-faint:  #8a8278;
+      --paper:      #f7f4ef;
+      --accent:     #8b3a2a;
+      --rule:       #d4cfc7;
+      --max:        680px;
+    }
+
+    html { font-size: 18px; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 300;
+      line-height: 1.85;
+      min-height: 100vh;
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards;
+      animation-delay: 0.2s;
+    }
+
+    @keyframes fadeIn { to { opacity: 1; } }
+
+    .masthead {
+      border-bottom: 1px solid var(--rule);
+      padding: 2.5rem 2rem 1.5rem;
+      text-align: center;
+    }
+    .masthead::before {
+      content: '';
+      display: block;
+      width: 2px;
+      height: 3rem;
+      background: var(--accent);
+      margin: 0 auto 1.5rem;
+    }
+    .masthead-label {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 1.25rem;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(3rem, 8vw, 5rem);
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      line-height: 1;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+    }
+    .masthead-rule {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+    .masthead-rule span { display: block; height: 1px; width: 4rem; background: var(--rule); }
+    .masthead-ornament { color: var(--accent); font-size: 1rem; line-height: 1; }
+
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 2rem; }
+
+    .essays { padding: 4rem 0 6rem; }
+
+    .essay-item {
+      border-bottom: 1px solid var(--rule);
+      padding: 2.5rem 0;
+    }
+    .essay-item:first-child { padding-top: 0; }
+    .essay-item:last-child { border-bottom: none; }
+
+    .essay-item a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .essay-item a:hover .essay-title { color: var(--accent); }
+
+    .essay-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .essay-subtitle {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.05rem;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--ink-light);
+      line-height: 1.5;
+      margin-bottom: 0.75rem;
+    }
+
+    .essay-date {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 2rem;
+      text-align: center;
+    }
+    .footer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .footer-rule { height: 1px; flex: 1; background: var(--rule); }
+    .footer-text {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="masthead">
+    <p class="masthead-label">Jeffrey M. O'Halloran</p>
+    <h1>Essays</h1>
+    <div class="masthead-rule">
+      <span></span>
+      <span class="masthead-ornament">◆</span>
+      <span></span>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="essays">
+
+      <div class="essay-item">
+        <a href="no-sir-your-policy-doesnt-cover-that/">
+          <h2 class="essay-title">No Sir, Your Policy Doesn't Cover That</h2>
+          <p class="essay-subtitle">A story about car insurance, a cracked windshield, and what it would have meant to have a better kind of help.</p>
+          <p class="essay-date">March 2026</p>
+        </a>
+      </div>
+
+      <div class="essay-item">
+        <a href="the-pattern/">
+          <h2 class="essay-title">The Pattern</h2>
+          <p class="essay-subtitle">An essay about what happens when you give your work a memory.</p>
+          <p class="essay-date">March 2026</p>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-rule"></span>
+      <span class="footer-text">Essays</span>
+      <span class="footer-rule"></span>
+    </div>
+  </footer>
+
+</body>
+</html>

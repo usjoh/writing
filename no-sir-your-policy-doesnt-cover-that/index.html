@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Sir, Your Policy Doesn't Cover That</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Libre+Franklin:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:        #1a1814;
+      --ink-light:  #4a4540;
+      --ink-faint:  #8a8278;
+      --paper:      #f7f4ef;
+      --paper-dark: #ede9e2;
+      --accent:     #8b3a2a;
+      --rule:       #d4cfc7;
+      --max:        680px;
+    }
+
+    html { font-size: 18px; scroll-behavior: smooth; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 300;
+      line-height: 1.85;
+      min-height: 100vh;
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards;
+      animation-delay: 0.2s;
+    }
+
+    @keyframes fadeIn { to { opacity: 1; } }
+
+    /* ── Masthead ── */
+    .masthead {
+      border-bottom: 1px solid var(--rule);
+      padding: 2.5rem 2rem 1.5rem;
+      text-align: center;
+      position: relative;
+    }
+    .masthead::before {
+      content: '';
+      display: block;
+      width: 2px;
+      height: 3rem;
+      background: var(--accent);
+      margin: 0 auto 1.5rem;
+    }
+    .masthead-label {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 1.25rem;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2.2rem, 7vw, 4rem);
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 1rem;
+    }
+    .masthead-subtitle {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--ink-light);
+      max-width: 480px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.5;
+    }
+    .masthead-rule {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+    .masthead-rule span { display: block; height: 1px; width: 4rem; background: var(--rule); }
+    .masthead-ornament { color: var(--accent); font-size: 1rem; line-height: 1; }
+
+    /* ── Layout ── */
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 2rem; }
+
+    /* ── Body text ── */
+    .body-text { padding: 4rem 0 6rem; }
+
+    p {
+      font-size: 1.15rem;
+      margin-bottom: 1.6em;
+      color: var(--ink);
+      font-weight: 300;
+    }
+
+    /* ── Section dividers ── */
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+      margin: 3rem 0;
+    }
+    .divider::before,
+    .divider::after {
+      content: '';
+      display: block;
+      height: 1px;
+      flex: 1;
+      background: var(--rule);
+    }
+    .divider-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: 0.6;
+    }
+
+    /* ── Pull quotes / key lines ── */
+    .key-line {
+      font-size: 1.35rem;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.6;
+      border-left: 2px solid var(--accent);
+      padding-left: 1.5rem;
+      margin: 2.5rem 0;
+    }
+
+    /* ── Single-sentence punches — uppercase accent ── */
+    .punch {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.6em;
+    }
+
+    /* ── Soft punch — italic, subdued ── */
+    .punch-soft {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: var(--ink-light);
+      font-style: italic;
+      margin-bottom: 1.6em;
+    }
+
+    /* ── Drop cap ── */
+    .drop-cap::first-letter {
+      float: left;
+      font-size: 4.5rem;
+      line-height: 0.8;
+      font-weight: 400;
+      margin-right: 0.08em;
+      margin-top: 0.1em;
+      color: var(--ink);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+
+    /* ── Emphasis text ── */
+    em { font-weight: 400; }
+
+    /* ── Closing section ── */
+    .closing {
+      border-top: 1px solid var(--rule);
+      padding-top: 3rem;
+      margin-top: 1rem;
+    }
+    .closing p:last-child { margin-bottom: 0; }
+
+    .final-line {
+      font-style: italic;
+      font-size: 1.25rem;
+      color: var(--ink-light);
+    }
+
+    /* ── Signature ── */
+    .signature {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+    }
+    .sig-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.05rem;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--ink-light);
+      margin-bottom: 0.25em;
+    }
+    .sig-date {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 0;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 2rem;
+      text-align: center;
+    }
+    .footer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .footer-rule { height: 1px; flex: 1; background: var(--rule); }
+    .footer-text {
+      font-family: 'Libre Franklin', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .footer-text a {
+      color: var(--ink-faint);
+      text-decoration: none;
+    }
+    .footer-text a:hover { color: var(--accent); }
+
+    /* ── Scroll reveal ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      p { font-size: 1.05rem; }
+      .key-line { font-size: 1.15rem; }
+      .drop-cap::first-letter { font-size: 3.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="masthead">
+    <p class="masthead-label">An Essay</p>
+    <h1>No Sir, Your Policy Doesn't Cover That</h1>
+    <p class="masthead-subtitle">A story about car insurance, a cracked windshield, and what it would have meant to have a better kind of help.</p>
+    <div class="masthead-rule">
+      <span></span>
+      <span class="masthead-ornament">◆</span>
+      <span></span>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="body-text">
+
+      <!-- ── Opening — the engineer's faith ── -->
+      <p class="drop-cap reveal">I am an engineer. What that means, practically, is that I have a deep and somewhat stubborn faith in process. Not blind faith — earned faith. The kind that accumulates slowly over a career spent watching careful structure quietly outperform improvisation in situations where the stakes were real.</p>
+
+      <p class="reveal">Here is what I have learned: most problems that feel overwhelming are really just systems that haven't been thought through carefully enough. The complexity isn't the enemy. The missing process is. Find the gap, close it, and what felt unmanageable becomes manageable. What felt chaotic becomes predictable. I have watched that happen enough times — in client engagements, in technical crises, in the daily logistics of a full and complicated life — that it has become less a professional habit and more a way of moving through the world.</p>
+
+      <p class="reveal">It gives you a particular kind of confidence. A quiet trust in the idea that if you set things up correctly and tend them consistently, the system holds. The calendar gets managed. The bills get paid. The loops get closed. You are not bulletproof, but you are prepared. And prepared, in my experience, is usually enough.</p>
+
+      <p class="reveal">I am telling you this because I want you to understand what I brought to a cracked windshield on an ordinary afternoon. Not just a task to be resolved. A belief system. A track record. Twenty years of evidence that process works.</p>
+
+      <div class="divider reveal"><span class="divider-dot"></span></div>
+
+      <!-- ── The phone call ── -->
+      <p class="reveal">So when I finally carved out the time to deal with a task I had avoided too long — the kind of mundane task that sits on the list for weeks while real life keeps cutting the line — I wasn't expecting a crisis. A half hour of my time; a phone call, maybe two. Had I known I was holding the straw that would break the camel's back I might have hung up before he finished.</p>
+
+      <p class="reveal">The person on the other end of the phone was polite about it. <em>No sir, your policy doesn't cover windshields.</em></p>
+
+      <p class="reveal">I thanked them and hung up.</p>
+
+      <p class="reveal">And then I just sat there.</p>
+
+      <p class="reveal">It wasn't the windshield. It wasn't the extra time and expense I now faced. It was the feeling! A pit in my stomach, sudden and unsettling. A realization that the structure I'd trusted had quietly failed me while I wasn't looking. I followed the rules and the rules hadn't followed back. I started pulling on the thread, trying to figure out where it had gone wrong. What I found wasn't one big oversight. It was a multitude of small ones. Each one reasonable in isolation. Each one invisible until you saw them all together — which, I have come to understand, is exactly how patterns work.</p>
+
+      <p class="punch reveal">To understand how we got here, let me start at the end and work back.</p>
+
+      <div class="divider reveal"><span class="divider-dot"></span></div>
+
+      <!-- ── The windshield ── -->
+      <p class="reveal">The windshield cracked during the worst of it — a stormy day, running late, everything going wrong — the usual story. It became another task for the list, set aside for a calmer moment that kept not arriving. When I finally gathered the energy to sit down and deal with it, I was thwarted by a small detail. A detail that would have taken thirty seconds to catch if anyone had been in a position to look for it.</p>
+
+      <p class="reveal">Nobody was. But it's worth understanding why. Because it wasn't carelessness. It was something more familiar than that.</p>
+
+      <div class="divider reveal"><span class="divider-dot"></span></div>
+
+      <!-- ── The coverage gap ── -->
+      <p class="reveal">When we signed up for the policy it was under pressure — as these things often are. We had been without car insurance, scrambling, making calls, making decisions on the fly, and the only thing that mattered in that moment was getting covered again. The careful comparison we would normally do — reading both policies side by side, making sure we weren't giving something up — got quietly set aside. We thought we were making an equivalent trade. We were comparing apples to oranges, and we didn't find out until months later.</p>
+
+      <p class="reveal">The reason we were in that position at all is where the story gets stranger.</p>
+
+      <div class="divider reveal"><span class="divider-dot"></span></div>
+
+      <!-- ── The cohabitation clause ── -->
+      <p class="reveal">A couple of months earlier we had signed up for a new insurance policy for both our cars. Everything seemed fine for a month or so until I received a strange phone call. The insurer wanted to know if Christine and I were married. Huh?</p>
+
+      <p class="reveal">Massachusetts state law, they explained, does not allow unmarried partners to share a single policy. They cancelled our coverage retroactively.</p>
+
+      <p class="key-line reveal">Fifteen years together. A six-year-old son. A mortgage. And apparently what we were missing was a certificate.</p>
+
+      <p class="reveal">The fix, it turned out, was simple: two separate policies, one for each of us. Which is exactly what we ultimately did. But you can only know to do that if someone surfaces the issue before you're already in it. Nobody did. And so we found ourselves uninsured, scrambling — which is exactly the wrong condition under which to catch a coverage gap.</p>
+
+      <div class="divider reveal"><span class="divider-dot"></span></div>
+
+      <!-- ── The autopay trap ── -->
+      <p class="reveal">And here is where it gets one layer deeper still.</p>
+
+      <p class="reveal">The reason we were shopping for a new policy was my old one had just been cancelled for non-payment. Not out of negligence — out of a quiet assumption buried in how the policy was structured, one that nobody surfaced. Not us, not the agent, not anyone.</p>
+
+      <p class="reveal">Two years earlier we had enrolled in the paperless invoice option. The next year the email renewal was spam filtered and the policy ended up getting cancelled. The irony of going paperless to simplify things was just beginning to reveal itself. Fortunately we got the miscommunication straightened out, policy reinstated and paid in full. Problem solved. We even took the step to enroll in autopay. Responsible. Sensible. The kind of thing you do when you want to make sure it never happens again. What we didn't know was that autopay only applied to monthly installments within the current policy period. When the renewal came due this year, it was billed as a single payment in full. Autopay didn't apply. There was no monthly installment for it to catch. It went unnoticed. It went unpaid. We were cancelled.</p>
+
+      <p class="reveal">We reached out immediately. We had been customers for fifteen years. We explained what had happened. It didn't matter. Because of the cancellation on our record, reinstatement was refused.</p>
+
+      <p class="key-line reveal">And so we found ourselves starting over — with a fifteen-year relationship gone, because I accepted the paperless option.</p>
+
+      <div class="divider reveal"><span class="divider-dot"></span></div>
+
+      <!-- ── The four moments ── -->
+      <p class="punch reveal">Four moments. Each one a place where a single piece of information, surfaced at the right time, would have changed everything that followed.</p>
+
+      <p class="reveal">The glass coverage gap — a thirty-second comparison nobody had bandwidth to make.</p>
+
+      <p class="reveal">The cohabitation clause — a technicality nobody thought to ask about.</p>
+
+      <p class="reveal">The autopay trap — a limitation nobody explained at signup.</p>
+
+      <p class="reveal">The paperless option — a convenience that quietly removed the last safety net.</p>
+
+      <p class="reveal">None of these required special knowledge. None required an insurance background or a legal degree. They required someone — or something — that already knew enough about our situation to know what to watch for. And was watching. Not in a moment of crisis, when our attention was elsewhere. Quietly, all the time, in the background.</p>
+
+      <p class="punch reveal">That's exactly what I've been building.</p>
+
+      <div class="divider reveal"><span class="divider-dot"></span></div>
+
+      <!-- ── Meridian ── -->
+      <p class="reveal">The essay I wrote earlier this year — <em>The Pattern</em> — described a system called Meridian. A knowledge-based copilot, built around the specific domains of my life and work, designed to hold the shape of things even when I can't.</p>
+
+      <p class="key-line reveal">There's a line in that essay I keep coming back to: "It holds the integrity of the project even when you're tired, distracted, or pulled away by the ten other things life is asking of you."</p>
+
+      <p class="reveal">That's this story. All of it.</p>
+
+      <p class="reveal">A Meridian domain built around our family's insurance and financial life would have known our policies, our renewal structures, our billing cycles — and the details of our household: who we are, how we live, the things that matter when someone is reading fine print.</p>
+
+      <p class="reveal">When we enrolled in paperless billing, it would have flagged the risk: <em>"Paperless invoices can be spam filtered. Consider a backup reminder closer to your renewal date."</em> The spam filter never becomes a crisis.</p>
+
+      <p class="reveal">When we configured autopay after the reinstatement, it would have understood how the renewal was structured and flagged the gap: <em>"Autopay is set for monthly installments. Your renewal will bill as payment in full. This won't be caught automatically."</em> One reminder set. The missed payment never happens. The fifteen-year relationship stays intact. None of what followed happens at all.</p>
+
+      <p class="reveal">But if that moment was missed — if life intervened, as it does — and we found ourselves shopping for new coverage, Meridian would have known we weren't legally married. It would have known Massachusetts has a cohabitation clause. It would have flagged it before we enrolled: <em>"Some insurers require separate policies for unmarried partners in Massachusetts. Worth confirming before you sign."</em> One question to the agent. The retroactive cancellation never happens.</p>
+
+      <p class="reveal">And if somehow we still found ourselves exhausted and scrambling, comparing policies without any prior coverage to reference, Meridian would have looked at both documents and quietly said: <em>"This policy doesn't include glass coverage. Worth confirming that's acceptable before you finalize."</em></p>
+
+      <p class="key-line reveal">Not an alarm. Not a judgment. Just a calm, informed voice saying: <em>here's something you should see</em> — holding the standard we couldn't hold for ourselves in that moment.</p>
+
+      <div class="divider reveal"><span class="divider-dot"></span></div>
+
+      <!-- ── Close ── -->
+      <div class="closing">
+
+        <p class="reveal">The capability to catch every one of those moments existed. It exists today, in tools anyone can access. What was missing wasn't intelligence. It was context — something that already knew our life well enough to know what to watch for — and continuity, something that was always present, not just when we thought to ask.</p>
+
+        <p class="reveal">Most of us have made peace with that gap. We absorb the costs. We tell ourselves it's just the price of things being complicated.</p>
+
+        <p class="punch reveal">It doesn't have to be.</p>
+
+        <p class="reveal">That's Meridian. That's what I'm building — for our family first, and eventually for the people and organizations I work with. A system that knows enough to notice, and is always there to say: <em>here's something you should see.</em></p>
+
+        <p class="final-line reveal">And yes — the car will get inspected. Eventually.</p>
+
+        <div class="signature reveal">
+          <p class="sig-name">Jeffrey M. O'Halloran</p>
+          <p class="sig-date">March 2026</p>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-rule"></span>
+      <span class="footer-text"><a href="../">Essays</a></span>
+      <span class="footer-rule"></span>
+    </div>
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setTimeout(() => { entry.target.classList.add('visible'); }, 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
