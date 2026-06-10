@@ -61,6 +61,14 @@
       color: var(--ink-faint);
       margin-bottom: 1.25rem;
     }
+    .masthead-deck {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.15rem;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--ink-light);
+      margin-bottom: 1.25rem;
+    }
     h1 {
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: clamp(3.5rem, 10vw, 6rem);
@@ -201,6 +209,20 @@
       margin-bottom: 0;
     }
 
+    /* ── Bio ── */
+    .bio {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+    }
+    .bio p {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 0.95rem;
+      font-style: italic;
+      color: var(--ink-light);
+      margin-bottom: 0;
+    }
+
     /* ── Footer ── */
     footer {
       border-top: 1px solid var(--rule);
@@ -244,8 +266,8 @@
 <body>
 
   <header class="masthead">
-    <p class="masthead-label">An Essay</p>
     <h1>The Pattern</h1>
+    <p class="masthead-deck">I gave my work a memory. It changed what I could carry.</p>
     <div class="masthead-rule">
       <span></span>
       <span class="masthead-ornament">◆</span>
@@ -257,9 +279,9 @@
     <article class="body-text">
 
       <!-- ── Opening ── -->
-      <p class="drop-cap reveal">Most people think of forgetting as a personal failure. A sign of genetics, old age, or just not paying enough attention. But forgetting isn't a flaw. It's a feature, and one of the most important ones human beings have. We forget what isn't relevant so we can focus on what is. We let go of yesterday's details so we can show up fully for today's demands.</p>
+      <p class="drop-cap reveal">I have always struggled with memory. I used to see my forgetfulness as a flaw. A sign of unlucky genetics, not paying enough attention at the right moments, or advancing age. But forgetting isn't necessarily a failure. It's a feature, and one of the most important ones human beings have. We forget what isn't relevant so we can focus on what is. We let go of yesterday's details so we can show up fully for today's demands. Being present in the now sometimes requires letting go of the past.</p>
 
-      <p class="reveal">The problem (the one nobody talks about) is retrieval. The knowledge is in there: the experience, the context, the decision you made six months ago and the reason you made it. But knowing something and being able to use it at the right moment are two very different things. The right thought arrives in the shower. The critical detail surfaces the day after it would have mattered. The lesson that took years to learn stays just out of reach when you need it most.</p>
+      <p class="reveal">The problem (the one we talk about less) is retrieval. The knowledge is in there: the experience, the context, the decision you made six months ago and the reason you made it. But knowing something and being able to use it at the right moment are two very different things. The right thought arrives in the shower. The critical detail surfaces the day after it would have mattered. The lesson that took years to learn stays just out of reach when you need it most.</p>
 
       <p class="reveal">Most of us have made peace with that gap. We've accepted it as simply the cost of being human, and moved on.</p>
 
@@ -271,13 +293,13 @@
       <div class="divider reveal"><span class="divider-dot"></span></div>
 
       <!-- ── The engagement ── -->
-      <p class="reveal">It started with a consulting engagement. A small family company had just finished building something remarkable: a fully connected operational system that brought their entire business together in one place. It worked. It was genuinely good. And the moment the consultant walked out the door, it belonged entirely to the people still in the room, holding something they hadn't yet learned to trust.</p>
+      <p class="reveal">It started with a consulting engagement. Mine. A small family company had just finished building something remarkable: a fully connected operational system that brought their entire business together in one place. It worked. It was genuinely good. And the moment the consultant walked out the door, it belonged entirely to the people still in the room, holding something they hadn't yet learned to trust.</p>
 
       <p class="reveal">That's the moment every implementation consultant quietly dreads. The handoff. The point where months of careful work either becomes something a team can truly own, or slowly becomes something they fear and work around.</p>
 
-      <p class="reveal">The answer was an AI-powered knowledge base. Not a manual. Something living: a complete, intelligent picture of how the system worked, why it worked that way, and what to do when it didn't. Detailed enough that someone facing an unfamiliar problem at the end of a long day could ask a question in plain language and get a real answer. Accurate enough to trust. Comprehensive enough to replace the person who built it.</p>
+      <p class="reveal">Our answer was an AI-powered knowledge base. Not a static manual. We implemented an interactive support agent: a complete, intelligent picture of how the system worked, why it worked that way, and what to do when it didn't. Detailed enough that someone facing an unfamiliar problem at the end of a long day could ask a question in plain language and get a real answer. Accurate enough to trust. Comprehensive enough that the expertise no longer lived only in a person's head.</p>
 
-      <p class="reveal">Imagine what that means for a small team running a growing business. No more waiting days for outside help. No more uncertainty about whether you're doing something the right way. No more vulnerability to critical knowledge walking out the door. Just answers, available instantly, from a system that knows the operation as well as the person who designed it.</p>
+      <p class="reveal">Imagine what that means for a small team running a growing business. No more waiting days for outside help. No more uncertainty about whether you're doing something the right way. No more vulnerability to critical knowledge walking out the door. Just answers, available instantly, from a system built to know the operation as well as the person who designed it.</p>
 
       <p class="reveal">That was the promise. And it was real. The AI worked.</p>
 
@@ -297,16 +319,16 @@
       <!-- ── Personal section — reframed ── -->
       <p class="reveal">And here is where the personal part of this story matters.</p>
 
-      <p class="reveal">This wasn't being built in ideal conditions. It was being built in the margins, between school pickups and late nights, in the hours carved out while managing personal health challenges and supporting aging family members navigating their own. The kind of life where you might not return to a complex project for three days, or a week, or longer. Where the context you were holding in your head when you last sat down has been completely displaced by everything life asked of you in between.</p>
+      <p class="reveal">I wasn't building this in ideal conditions. I was building it in the margins, between school pickups and late nights, in the hours carved out while managing personal health challenges and supporting aging family members navigating their own. The kind of life where you might not return to a complex project for three days, or a week, or longer. Where the context you were holding in your head when you last sat down has been completely displaced by everything life asked of you in between.</p>
 
-      <p class="reveal">That fragmentation isn't unique to this story. It's the reality for anyone managing meaningful work alongside a full life: parents, caregivers, anyone whose attention is genuinely scarce and genuinely spoken for. And it turned out to be the most important constraint the solution had to meet. A system that only works in ideal conditions isn't a solution. It's a prototype. The real test is whether it holds up when life doesn't cooperate, which is most of the time.</p>
+      <p class="reveal">That fragmentation isn't unique to this story. It's the reality for anyone managing meaningful work alongside a full life, anyone whose attention is genuinely scarce and genuinely spoken for. And it turned out to be the most important constraint the solution had to meet. A system that only works in ideal conditions isn't a solution. It's a prototype. The real test is whether it holds up when life doesn't cooperate. Which is most of the time.</p>
 
       <div class="divider reveal"><span class="divider-dot"></span></div>
 
       <!-- ── First breakthrough ── -->
       <p class="reveal">The first breakthrough came from a reframe. What if the AI could maintain the knowledge base itself? Not write the content (that still required human judgment about what was true), but handle the consistency. You provide the knowledge. The AI makes sure it stays accurate everywhere it needs to be accurate.</p>
 
-      <p class="reveal">This worked better than expected. Far better. Given the right structure, the AI could hold the entire knowledge base in its awareness simultaneously, understand how every piece related to every other piece, and when something changed, trace every downstream effect and update accordingly. Work that would have taken days of careful cross-referencing happened in minutes, correctly, every time.</p>
+      <p class="reveal">This worked better than expected. Far better. Given the right structure, the AI could hold the whole knowledge base in view at once, see how each piece related to the others, and when something changed, trace the downstream effects and update accordingly. Work that would have taken days of careful cross-referencing happened in minutes.</p>
 
       <p class="reveal">For a brief moment, the problem felt solved.</p>
 
@@ -317,11 +339,15 @@
 
       <p class="reveal">You're working with an AI assistant on something complex. The session goes well. Decisions get made, structure gets established, progress happens. You close the laptop feeling like you've moved something forward.</p>
 
-      <p class="reveal">You come back after a few days (pulled away by life, as always) and open a new session. The AI greets you with the same competence and confidence it always has. And then, subtly, it starts undoing things. Not maliciously. Not even incorrectly, by its own logic. It simply has no memory of what was decided. No awareness of the constraint that was carefully established. No way of knowing that the perfectly reasonable change it's making right now is dismantling something that took two sessions to build.</p>
+      <p class="reveal">You come back after a few days (pulled away by life, as always) and open a new session. The AI greets you with the same competence and confidence it always has. And then, subtly, it starts undoing things. Not maliciously. Not even incorrectly, by its own logic. It simply isn't carrying what was decided. No awareness of the constraint that was carefully established. No way of knowing that the perfectly reasonable change it's making right now is dismantling something that took two sessions to build.</p>
 
-      <p class="reveal">This is the hidden cost of working with AI on anything that grows and evolves over time. Every session is the first session. Every conversation starts from zero. The AI is brilliant and amnesiac in equal measure, and when your work is complex enough, and your time is fragmented enough, the amnesia starts to win.</p>
+      <p class="reveal">I know this failure from the inside. There was a stretch where every time I came back to the work, I was relieved by how quickly I could pick back up: ideas, decisions, actions, all moving, wind in my face. But as the work grew, that same wind built into a headwind. I found myself re-explaining decisions I had already made, watching settled questions come unsettled, fixing the same drift I had fixed the week before, to the point where I caught myself seriously thinking it would be less work to burn the whole project down and start over than to keep untangling it.</p>
 
-      <p class="reveal">The project that was supposed to be getting more capable was getting more fragile. The tool that was supposed to reduce the burden of complexity was adding to it. And then the realization arrived, not as a dramatic moment, but as a quiet settling of something that had been true for a while without a name:</p>
+      <p class="reveal">And then there was the afternoon the AI assistant, in an effort to improve my awareness of something important, overwrote a full morning of my personal journal entries in a single stroke. The confidence with which it announced it had accomplished its task was a wake-up call.</p>
+
+      <p class="reveal">This is the hidden cost of working with AI on anything that grows and evolves over time. The AI is brilliant and amnesiac in equal measure, and when your work is complex enough, and your time is fragmented enough, the amnesia starts to win.</p>
+
+      <p class="reveal">The project that was supposed to be getting more capable was getting more fragile. The tool that was supposed to reduce the burden of complexity was adding to it. And then the realization arrived, not as a dramatic moment, but as a quiet recognition of something that had been true for a while:</p>
 
       <p class="key-line reveal">The AI wasn't lost. The map was missing.</p>
 
@@ -332,26 +358,28 @@
       <!-- ── The solution ── -->
       <p class="punch reveal">The answer wasn't to work around the amnesia. It was to give the work itself a memory.</p>
 
-      <p class="reveal">Not notes. Not documentation in the traditional sense. Something structural, woven into the work itself. Something that held the decisions that had been made and why. That knew what existed and what it meant. That detected when things had drifted from intent and knew how to bring them back. That made it harder to drift from what had been decided, not because someone was always watching, but because the structure itself was designed to notice.</p>
+      <p class="reveal">Not notes. Not documentation in the traditional sense. Something structural, woven into the work itself. Not just the details of what exists but what it means and its purpose. Something that tracked not just decisions, but what led to them and why. Something that could use all of it to detect when things had drifted from intent and know how to bring them back, or at least speak up. That made it harder to drift from what had been decided, not because someone was always watching, but because the structure itself was designed to notice.</p>
 
       <p class="key-line reveal">A living map. One that updated when the territory changed, remembered where it had been, and never let the gap grow quietly in the dark.</p>
 
-      <p class="reveal">That structure turned out to need only four things: a map of what exists, a record of why decisions were made, a description of how things work, and a snapshot of what&rsquo;s true right now. Four layers. Each one simple on its own. The work is in keeping them honest &mdash; and that&rsquo;s where the system earns its keep.</p>
+      <p class="reveal">That structure turned out to need only four things: a map of what exists, a record of why decisions were made, a description of how things work, and a snapshot of what&rsquo;s true right now. Each one simple on its own. The work is in keeping them honest &mdash; and that&rsquo;s where the structure earns its keep.</p>
+
+      <p class="reveal">Not long ago, back inside that same family business, I was one click from closing out a customer's record when the structure stopped me. It had identified new information filed under three different spellings of what looked like the same name: one in the billing system, one in our own working notes, and one on the original order form. A mishearing from a phone call weeks earlier had quietly worked its way into everything downstream. Another inconsistency had slipped in through a connected mobile app. Because the layers disagreed out loud instead of agreeing in silence, both were caught before I acted on an inaccurate map.</p>
 
       <div class="divider reveal"><span class="divider-dot"></span></div>
 
       <!-- ── Tool to collaborator ── -->
-      <p class="reveal">And once that structure existed, something shifted that is difficult to fully articulate but impossible to miss once you've felt it.</p>
+      <p class="reveal">And once that structure existed, something shifted that is difficult to fully articulate, but impossible to miss once you've felt it.</p>
 
       <p class="punch reveal">The AI stopped being a tool.</p>
 
-      <p class="reveal">A tool works for you. It does what you ask in the moment, with no stake in the outcome, no memory of the journey, no investment in what you were actually trying to build. Come back to it three weeks later with half the context you had before, and it will work just as hard to undermine your previous decisions as to advance them. Not out of malice, but out of pure, perfect indifference to everything that came before.</p>
+      <p class="reveal">A tool works for you. It does what you ask in the moment, with no stake in the outcome, no enduring memory of the journey, no investment in what you were actually trying to build. Come back to it three weeks later with half the context you had before, and it will work just as confidently undermining your previous decisions as advancing them. Not out of malice, but out of an inaccurate understanding of everything that came before.</p>
 
       <p class="reveal">Something that works with you is different. It carries the work between sessions. It remembers what was decided and pushes back when you're about to contradict it. It holds the integrity of the project even when you're tired, distracted, or pulled away by the ten other things life is asking of you. It makes you more capable than you are alone, not just by doing things faster, but by holding a standard you couldn't maintain by yourself.</p>
 
-      <p class="reveal">For the first time, that's what this began to feel like. Not a faster way to do what I was already doing. Something closer to a genuine collaborator on real, complex, messy, human-driven work; the kind that doesn't fit neatly into a single session, a single conversation, or a single person's ability to hold it all together.</p>
+      <p class="reveal">For the first time, that's what this began to feel like. Not a faster way to do what I was already doing. Something closer to a genuine collaborator on the kind of messy, human work that doesn't fit neatly into a single session, a single conversation, or a single person's ability to hold it all together.</p>
 
-      <!-- Single best em dash — kept as key-line -->
+      <!-- Em-dash convention: placed, not banned — dashes appear only where the machine/structure speaks (intentional signature); human-voice passages stay dash-free -->
       <p class="key-line reveal">That moment — when a tool becomes something that works with you — is the thing this story is really about.</p>
 
       <div class="divider reveal"><span class="divider-dot"></span></div>
@@ -363,44 +391,44 @@
 
       <p class="reveal">There was only one honest response. The structure that was built to hold the shape of other things was turned on itself.</p>
 
-      <p class="punch reveal">It held.</p>
+      <p class="punch reveal">It has held.</p>
 
-      <p class="reveal">Not as an experiment. Not as a clever demonstration. Because if it couldn&rsquo;t work here, it couldn&rsquo;t work anywhere. But it did. The system became its own first test case, governing its own integrity with the same discipline it had been built to bring to everything else.</p>
-
-      <p class="reveal">That quality &mdash; a thing capable of sustaining itself &mdash; turned out to be the clearest signal that something real had been found. Not a fix for one specific situation. Not a tool for one particular kind of work.</p>
+      <p class="reveal">Not as an experiment. Not as a clever demonstration. Because if it couldn&rsquo;t govern itself, it would always be a special-purpose tool for the right situations. The structure became its own best test case, governing its own integrity with the same discipline it had been built to bring to everything else. That quality &mdash; a thing capable of sustaining itself &mdash; turned out to be the clearest signal that something real had been found. Not a fix for one specific situation. Not a tool for one particular kind of work.</p>
 
       <p class="key-line reveal">A pattern.</p>
 
       <!-- ── Credibility paragraph ── -->
-      <p class="reveal">I should say something here. I didn't discover this pattern in a vacuum, and recognizing it wasn't entirely a surprise. I've spent thirty years at the intersection of systems architecture, knowledge management, and human behavior: work that spans mission-critical defense systems, enterprise software at scale, and knowledge management implementations that mostly failed for exactly the reasons this story describes. None of that background made the realization arrive faster. But it meant I recognized what I was looking at when I did.</p>
+      <p class="reveal">I should say something here. I didn't discover this pattern in a vacuum. I've spent thirty years building systems at the intersection of systems architecture, knowledge management, and human behavior: from personal software to mission-critical defense systems, from startups to enterprise platforms, including knowledge systems that failed for exactly the reasons this story describes. None of that background made the realization arrive faster. But it meant I recognized what I was looking at when it did.</p>
 
       <div class="divider reveal"><span class="divider-dot"></span></div>
 
       <!-- ── Patterns everywhere ── -->
       <p class="punch reveal">And patterns, once recognized, show up everywhere.</p>
 
-      <p class="reveal">The same shape appeared almost immediately in completely different places. A set of automated routines that finally kept a laptop maintained without requiring its owner to remember what needed doing or when. A living document of a home network and automation system, one that didn't just record how things were configured, but could reason about why something had stopped working and walk through fixing it.</p>
+      <p class="reveal">The same shape appeared almost immediately in completely different places. A reunion of old crewmates, where twenty-five years of scattered notes and half-remembered logistics were pulled back into one living story everyone could navigate. A family vacation with enough moving parts to overwhelm any one planner (flights, reservations, wish lists), kept current in one place that even the least technical member of the family could trust.</p>
 
-      <p class="punch-soft reveal">Those are small things. Practical things. Slightly geeky things.</p>
+      <p class="punch-soft reveal">Those are small things. Personal things. The kind that never make it onto a résumé.</p>
 
-      <p class="reveal">But once you see the pattern, it's hard to unsee where it leads. The knowledge that walks out the door when an expert retires, preserved, navigable, alive. The businesses that stay small not because the opportunity isn't there but because the operational burden of growth becomes unmanageable, now with a clearer path forward. The parents, the caregivers, the people building something meaningful in the margins: anyone with real capability and real ideas who could never quite sustain the momentum that complex work demands. Now with tools that can help carry it.</p>
+      <p class="reveal">But once you see the pattern, it's hard to unsee where it leads. The knowledge that walks out the door when an expert retires, preserved, navigable, alive. The businesses that stay small not because the opportunity isn't there but because the operational burden of growth becomes unmanageable. The people with the ideas and capability to create something meaningful, but not enough uninterrupted life to sustain it alone. Now with tools that can help carry it.</p>
 
       <!-- ── Close ── -->
       <div class="closing">
 
         <p class="reveal">Most of us are carrying more than we can hold. Not because we lack capability, but because the complexity of the work we care about has quietly grown past what any one person was designed to manage alone. We keep up as best we can. We manage calendars, make checklists, take notes. We accept the gap between what we intended and what we were actually able to sustain as the normal cost of having a full life.</p>
 
-        <p class="reveal">That gap doesn't have to stay as wide as it is. The tools for a new kind of collaboration are here. What has been missing, until now, is the structure that makes that collaboration trustworthy across time.</p>
+        <p class="reveal">That gap has long looked like an unavoidable fact of a complex world. It isn't. It is a solvable problem, and the solution turns out to be simpler, and stranger, than anyone who has tried to solve it by brute force would expect. The tools for a new kind of collaboration are here. What is missing is the structure that makes that collaboration trustworthy across time.</p>
 
-        <p class="reveal">The gap between the map and the territory has long been accepted as an unavoidable cost of a complex world. It isn't. It is a solvable problem. And the solution turns out to be simpler, and stranger, than anyone who has tried to solve it by brute force would expect.</p>
-
-        <p class="reveal">That's what a tool becoming a collaborator makes possible. Not just better work. Different work. Work that was previously too complex, too interconnected, or too dependent on a single person's ability to hold it all together.</p>
+        <p class="reveal">That's what a tool becoming a collaborator makes possible. Not just better work. Different work. Work that was previously too complex, too interconnected, or too dependent on a single person's ability to hold it all together. Every new tool that promises to remember is circling this same missing structure.</p>
 
         <p class="final-line reveal">Life is complicated. The pattern is real.<br>And it is just beginning to be applied.</p>
 
         <div class="signature reveal">
           <p class="sig-name">Jeffrey M. O'Halloran</p>
-          <p class="sig-date">March 2026</p>
+          <p class="sig-date">2026</p>
+        </div>
+
+        <div class="bio reveal">
+          <p>The system in this essay is real; Jeff is building it more broadly now. Reach him at joh71c@gmail.com.</p>
         </div>
 
       </div>
